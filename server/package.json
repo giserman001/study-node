@@ -1,0 +1,45 @@
+{
+  "name": "simple-server",
+  "version": "1.0.0",
+  "description": "基于node-koa2的服务器解决方案",
+  "main": "app.js",
+  "dependencies": {
+    "commander": "^2.17.1",
+    "ejs": "^2.6.1",
+    "jsonwebtoken": "^8.5.1",
+    "koa": "^2.5.2",
+    "koa-bodyparser": "^4.2.1",
+    "koa-compress": "^3.0.0",
+    "koa-cors": "0.0.16",
+    "koa-router": "^7.4.0",
+    "koa-session": "^5.8.2",
+    "koa-static": "^5.0.0",
+    "koa-static-cache": "^5.1.2",
+    "koa-views": "^6.1.4",
+    "koa2-cors": "^2.0.6",
+    "log4js": "^3.0.5",
+    "mysql": "^2.16.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "createDoc": "apidoc -i router/ -o static/apidoc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/keysama/simpleServer.git"
+  },
+  "keywords": [
+    "koa"
+  ],
+  "author": "keysama",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/keysama/simpleServer/issues"
+  },
+  "homepage": "https://github.com/keysama/simpleServer#readme",
+  "apidoc": {
+    "title": "接口文档",
+    "url": "http://localhost:8083/apidoc"
+  }
+}

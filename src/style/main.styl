@@ -1,0 +1,400 @@
+@import "./theme.styl"
+
+.newRequired label:before{
+  content: '*';
+  color: #F56C6C;
+  margin-right: 4px;
+}
+
+//通用样式
+*
+  margin 0
+  padding 0
+  list-style none
+  font-size:14px
+body
+  min-width 1366px
+  overflow-x auto
+
+button
+  border none
+
+.fullBtn
+  width: 100%
+
+button, input
+  -webkit-appearance none
+  outline none
+
+i,em
+  font-style normal
+
+.ovh
+  overflow hidden
+
+a
+  color: #000
+  outline none
+  text-decoration none
+  -webkit-tap-highlight-color: transparent
+
+.flex
+  display: flex;
+
+.flex-bt
+  justify-content space-between
+.mt10
+  margin-top: 10px
+.mt20
+  margin-top: 20px
+
+.mt30
+  margin-top: 40px
+
+.mt30
+  margin-top: 30px
+
+.mb20
+  margin-bottom: 20px
+
+.mr20
+  margin-right: 20px
+.mr5
+  margin-right: 5px
+
+.fz13
+  font-size: 1.3rem
+
+.fz14
+  font-size: 1.4rem
+
+.fz12
+  font-size: 1.2rem
+
+.fz16
+  font-size: 1.6rem
+
+.fz15
+  font-size: 1.5rem
+
+.tac
+  text-align: center
+
+.noWrapper
+  white-space nowrap
+
+.bold
+  font-weight:bold
+
+.clearfix:before, .clearfix:after
+  display: table;
+  content: "";
+.clearfix:after
+  clear: both
+
+.text-center
+  text-align:center
+.text-right
+  text-align:right
+
+.c_red
+  color: red
+.c_blue
+  color: #409EFF
+.c_999
+  color: #999
+
+//app.vue
+#app
+  min-height 100vh
+  min-width 1000px
+  font-family '微软雅黑'
+  background-color: #F5F5F9
+
+//常用文字格式
+.contentCommon
+  color: #7d7d7d
+  font-size: 1.4rem
+  line-height: 1.8rem
+
+.dateContentCommon
+  color: #999
+  font-size: 1.3em
+
+.icon-back
+  color #fff
+  position: absolute
+  left: 1rem
+  top: 50%
+  transform translateY(-50%)
+
+//常用btns按钮
+.my-btn-primary
+  background-color: transparent
+  border 1px solid #0AA86C
+  font-size: 1.3rem
+  padding 0.4rem 1rem
+  line-height: 1
+  border-radius 2.5rem
+  color: #0AA86C
+  a
+    color: #0AA86C
+
+.my-btn-solid
+  background-color: #FF7118
+  font-size: 1.5rem
+  padding 0.5rem 1rem
+  line-height: 1.5rem
+  border-radius 2.5rem
+  color: #fff
+
+.btn-large
+  display: inline-block
+  width: (690 / 750 * 37.5) rem
+  line-height: 1
+  padding: 1em 0
+
+.btn-primary-c
+  background-color: #0DAB6C
+
+// 图标默认样式
+.iconfont
+  vertical-align: middle;
+  margin-right: 5px;
+  width: 24px;
+  text-align: center;
+  font-size: 20px;
+
+// 筛选面板样式
+.toolbar
+  //background: #f2f2f2;
+  //padding: 10px;
+.toolbar, .base_cells
+  //margin: 10px 0;
+  //padding-bottom: 0px;
+  .el-form
+    display: flex
+    flex-wrap wrap
+    .toolbar_submit
+      flex: 1
+      text-align: right
+  .el-input__inner
+    height: 36px
+  .el-form-item
+    margin-bottom: 10px
+  .el-button
+    padding: 10px 20px
+  .el-form-item__label
+    min-width: 110px
+
+// 工具面板样式
+.controls
+  margin: 20px 0 10px
+
+
+//button.el-button
+//  padding: 9px 20px;
+//  border-radius 3px
+// 列表样式修改
+#app
+  .my_table_cell
+    text-align: center
+  .my_table_header
+    color: #333
+    background: #eef1f6
+    text-align: center
+
+// 表单页面面板样式
+.form_panel, .cards
+  margin-top: 30px
+
+// 面板样式
+.my_panel
+  display: flex
+  flex-wrap wrap
+  &.form_in_panel
+    .el-form-item
+      margin-bottom: 20px
+      .el-input
+        width: 100%
+      &:last-child
+        margin-bottom: 0
+  &.trisect_panel
+    .el-form-item
+      width: 33%;
+  &.half_panel
+    .el-form-item
+      width: 50%;
+  .el-form-item
+    &.flexFull
+      display: flex
+      .el-form-item__label
+        min-width 130px
+      .el-form-item__content
+        flex: 1
+    &.panel_item_row
+      width: 100%
+    width: 100%
+    margin-right: 0;
+    margin-bottom: 0;
+    .el-form-item__label
+      width: 130px;
+      color: #99a9bf;
+
+// 左边图片的面板
+.my_panel
+  .el-form-item__label, .el-form-item__content
+    line-height: 30px
+  .left_img_wrapper
+    display flex
+    align-items center
+    width: 100%
+    margin-bottom: 10px
+    .left_img
+      width: 90px
+      height: 90px
+      margin-right: 30px
+      border-radius: 8px
+
+// 展开效果标题样式
+.collapse_title
+  border-left: 4px solid color-primary
+  line-height: 2.5em
+  padding-left: 10px
+  font-size: 16px
+.el-collapse-item__wrap
+  border-bottom: none
+
+// 分页样式调整
+.my_pagination
+  text-align: center
+  margin-top: 20px
+
+// 表格选中行背景色调整
+#app
+  .el-table--striped .el-table__body tr.el-table__row--striped.current-row td, .el-table__body tr.current-row>td, .el-table__body tr.hover-row.current-row>td, .el-table__body tr.hover-row.el-table__row--striped.current-row>td, .el-table__body tr.hover-row.el-table__row--striped>td, .el-table__body tr.hover-row>td
+    background-color: current-row-bg
+    //color current-row-color
+//  .current-row
+//    box-shadow 0 0 2px 2px blue
+
+// statusColor
+.colorSucc
+  color: color_succ
+.colorError
+  color: color_error
+  .el-form-item__label
+    color: color_error
+
+// 日期、时间安排表中颜色提示器样式
+.colorTips
+  display: flex
+  flex-flow row-reverse
+  .colorTips_item
+    display: flex
+    align-items center
+    margin-right: 40px
+    .colorTips_item_color
+      width: 60px
+      height: 30px
+      margin-right: 10px
+
+.form-inline-search-btn
+  text-align: right
+  flex: 1
+
+.controlsBtn
+  color: #1890ff
+  margin: 5px
+  text-decoration underline
+  cursor pointer
+  display: inline-block
+  white-space: nowrap
+
+
+// card 卡片相关样式
+.el-card__header
+  padding:12px 15px
+.el-card__body
+  padding:12px 15px
+// 新闻列表样式
+.newList li
+  padding:5px 0
+// 表单间距缩小
+.el-form-item
+  margin-bottom :15px
+// 搜索表单间距缩小
+.el-form-item--mini.el-form-item, .el-form-item--small.el-form-item
+  margin-bottom: 10px !important
+// 双日期输入框调整
+.el-date-editor--daterange.el-input, .el-date-editor--daterange.el-input__inner, .el-date-editor--timerange.el-input, .el-date-editor--timerange.el-input__inner
+  width: 250px
+.search
+  padding: 10px 0 0 0
+  background: #fff
+// 默认列表样式调整
+.el-table td, .el-table th
+  padding:8px 0
+.el-table th
+  background: #eee
+
+// 公共的滚动条的样式
+.scrollBar::-webkit-scrollbar{
+    width: 5px;
+}
+/* 滚动槽 */
+.scrollBar::-webkit-scrollbar-track{
+    background: #ddd;
+    width: 3px;
+    overflow: hidden;
+}
+/* 滚动条滑块 */
+.scrollBar::-webkit-scrollbar-thumb{
+    border-radius: 10px;
+    background: #666;
+    width: 10px;
+}
+IE下滚动条样式
+.scrollBar{
+  /*三角箭头的颜色 （IE下滚动条颜色设置）*/
+  scrollbar-arrow-color: #666;
+  /*滚动条滑块按钮的颜色*/
+  scrollbar-face-color: #666;
+  /*滚动条整体颜色*/
+  scrollbar-highlight-color: transparent;
+  /*滚动条阴影*/
+  scrollbar-shadow-color: transparent;
+  /*滚动条轨道颜色*/
+  scrollbar-track-color: #ddd;
+}
+.el-rate__decimal
+  font-size: 18px
+
+.payway .el-collapse-item__header
+  font-size:15px
+/* 列表操作按钮 */
+.handleBtn{padding:3px !important;width:28px;height:28px;box-sizing:border-box}
+.handleBtn .iconfont{margin:0}
+/* dialog */
+.el-dialog__body{padding-top:15px}
+.teamAttachments{display:flex}
+.teamAttachments > div{
+  width: 100%
+}
+.teamAttachments .my-gallery{
+  display: flex;
+  flex-wrap: wrap;
+}
+.teamAttachments .my-gallery figure img{
+  width: 100px;
+  margin-right: 20px
+}
+
+.inviteView .el-tabs__content{display: none;margin-bottom:-1px}
+.tabMenu{position:fixed;z-index:999;top:59px;width:100%;box-sizing:border-box;left:0;right:0;padding:0 48px 0 270px}
+.tabMenu ul{background-color: #f5f7fa;border: 1px solid #dcdfe6;height:40px;line-height:40px;}
+.tabMenu li{float:left;}
+.tabMenu li.hover a{background:#fff;border-left: 1px solid #dcdfe6;border-right: 1px solid #dcdfe6;height:41px;position:relative;}
+.tabMenu li a{color:#909399;display:block;height:40px;line-height:40px;padding:0px 20px}
+.tabMenu li.hover a{color:#409EFF}
+.edui-default{line-height:1.5 !important}
