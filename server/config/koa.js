@@ -10,6 +10,7 @@ const logger = require('../middlewares/logger.js')// 配置好的日志中间件
 const session = require('../middlewares/session.js')// 配置好的session中间件
 const cors = require('../middlewares/cors.js')// 配置好的跨域中间件
 const ejs = require('../middlewares/ejs.js')// 配置好的ejs模板
+const token = require('../middlewares/token') // 验证token是否失效中间件
 
 const app = new Koa()// 没啥好说的=L=
 
@@ -25,6 +26,8 @@ module.exports = () => {
   session(app) // session的中间件，通过ctx.session存取
 
   ejs(app) // ejs模板
+
+  app.use(token.verifyToken) // 验证token是否失效
 
   router(app) // 路由
 

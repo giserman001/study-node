@@ -32,7 +32,7 @@
     },
     methods: {
       submit () {
-        this.$router.push('/dataCleanout')
+        this.$router.push('/home')
       }
     },
     async mounted () {
